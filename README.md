@@ -4,12 +4,12 @@ This is a sampler of [DCGAN OFFICIAL TUTORIAL](https://pytorch.org/tutorials/beg
 
 # Build environment
 
-- it is recommend to build on GPU machine
+- Need to build on GPU machine
 
 ## 1. install libraries via `requirements.txt`
 
 ```sh
-pip[3] install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## 2. download dataset 
@@ -19,6 +19,6 @@ Please download CelabA dataset via [official website](http://mmlab.ie.cuhk.edu.h
 ## 3. run main program
 
 ```sh
-python[3] main.py
+python main.py
 ```
 

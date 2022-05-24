@@ -8,6 +8,7 @@ from functions.preprocess import dataloader, device, weights_init
 from functions.generator import Generator
 from functions.discriminator import Discriminator
 from functions.result import plot
+from functions.visualize import visualize
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -31,5 +32,7 @@ netD.apply(weights_init)
 print(f"netG: {netG}")
 print(f"netD: {netD}")
 
-D_losses, G_losses = train(num_epochs=num_epochs, dataloader=dataloader, netD=netD, netG=netG)
+img_list, D_losses, G_losses = train(num_epochs=num_epochs, dataloader=dataloader, netD=netD, netG=netG)
 plot(D_losses, G_losses)
+
+visualize(img_list)

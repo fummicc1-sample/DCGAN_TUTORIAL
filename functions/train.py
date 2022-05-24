@@ -81,4 +81,4 @@ def train(num_epochs: int, dataloader: DataLoader, netD: Module, netG: Module):
                     fake = netG(fixed_noise).detach().cpu()
                 img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
             iters += 1
-    return D_losses, G_losses
+    return img_list, D_losses, G_losses
